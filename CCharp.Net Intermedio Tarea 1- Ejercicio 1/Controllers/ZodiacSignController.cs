@@ -8,9 +8,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CCharp.Net_Intermedio_Tarea_1__Ejercicio_1.Controllers
 {
-    public class SignoZodiacalController1 : Controller
+    public class ZodiacSignController : Controller
     {
-        // GET: /<controller>/
+        [HttpGet]
         public IActionResult Create()
         {
             return View();
