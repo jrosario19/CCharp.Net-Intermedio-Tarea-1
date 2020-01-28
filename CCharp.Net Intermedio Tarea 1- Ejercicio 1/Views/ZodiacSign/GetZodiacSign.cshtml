@@ -1,9 +1,10 @@
 ﻿@model ZodiacSign
 @{
 
-    ViewBag.Title = "Create Zodiac Sign";
+    ViewBag.Title = "Formulario Consulta";
 
 }
+Formulario para consulta de Signo Zodiacal
 <form enctype="multipart/form-data" asp-controller="ZodiacSign" asp-action="Create" method="post" class="mt-3">
     <div class="form-group row">
         <label asp-for="Day" class="col-sm-2 col-form-label"></label>
@@ -16,13 +17,10 @@
             <input asp-for="Month" class="form-control" placeholder="Mes" />
             <span asp-validation-for="Month" class="text-danger"></span>
         </div>
+        <br />
+        <br />
         <div class="col-sm-10">
-            <input asp-for="Name" class="form-control" placeholder="Signo Zodiacal" />
-            <span asp-validation-for="Name" class="text-danger"></span>
-        </div>
-        <div class="col-sm-10">
-            <input asp-controller="ZodiacSign" asp-action="Create" />
-            <span asp-validation-for="Name" class="text-danger"></span>
+            <button asp-controller="ZodiacSign" asp-action="Create" class="btn btn-primary">Consultar</button>
         </div>
     </div>
 </form>
