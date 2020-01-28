@@ -1,0 +1,25 @@
+﻿@model MultiplyTable
+@{
+
+    ViewBag.Title = "Tablas de Multiplicar";
+
+}
+    <h2>Formulario para consultar tabla de multiplicar</h2>
+<form enctype="multipart/form-data" asp-controller="MultiplyTables" asp-action="GetMultiplyTable" method="post" class="mt-3">
+    <div class="form-group row">
+        <label asp-for="Multiplying" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+            <input asp-for="Multiplying" class="form-control" placeholder="Multiplicando" />
+            <span asp-validation-for="Multiplying" class="text-danger"></span>
+        </div>
+        
+        <br />
+        <br />
+        <div class="col-sm-10">
+            <button asp-controller="MultiplyTables" asp-action="GetMultiplyTable" class="btn btn-primary">Consultar</button>
+        </div>
+    </div>
+</form>
+
+
+
