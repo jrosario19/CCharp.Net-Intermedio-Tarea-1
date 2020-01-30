@@ -1,0 +1,51 @@
+﻿@model QuadraticEquation
+@{
+
+    ViewBag.Title = "Formulario Consulta Ecuación Cuadratica";
+
+}
+<h3>@Model.Message</h3>
+<form enctype="multipart/form-data" asp-controller="QuadraticEquation" asp-action="GetQuadraticEquation" method="get" class="mt-3">
+    <div class="form-group row">
+        <label asp-for="AValue" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+            <input asp-for="AValue" class="form-control" disabled />
+            <span asp-validation-for="AValue" class="text-danger"></span>
+        </div>
+        <br />
+        <br />
+        <label asp-for="BValue" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+            <input asp-for="BValue" class="form-control" disabled />
+            <span asp-validation-for="BValue" class="text-danger"></span>
+        </div>
+        <br />
+        <br />
+        <label asp-for="CValue" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+            <input asp-for="CValue" class="form-control" disabled />
+            <span asp-validation-for="CValue" class="text-danger"></span>
+        </div>
+        <br />
+        <br />
+        <label asp-for="Solution1" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+            @*<input asp-for="Solution1" class="form-control" disabled  />*@
+            <input value="@Model.Solution1" class="form-control" disabled />
+            <span asp-validation-for="Solution1" class="text-danger"></span>
+        </div>
+        <br />
+        <br />
+        <label asp-for="Solution2" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+            <input value="@Model.Solution2" class="form-control" disabled />
+            <span asp-validation-for="Solution2" class="text-danger"></span>
+        </div>
+        <br />
+        <br />
+        <div class="col-sm-10">
+            <a asp-controller="QuadraticEquation" asp-action="GetQuadraticEquation" class="btn btn-primary">Volver a consultar</a>
+        </div>
+    </div>
+</form>
+

@@ -1,0 +1,35 @@
+﻿@model QuadraticEquation
+@{
+
+    ViewBag.Title = "Formulario Consulta Ecuación Cuadratica";
+
+}
+<h3>Formulario para consulta de Ecuación Cuadratica</h3>
+<form enctype="multipart/form-data" asp-controller="QuadraticEquation" asp-action="GetQuadraticEquation" method="post" class="mt-3">
+    <div class="form-group row">
+        <label asp-for="AValue" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+            <input asp-for="AValue" class="form-control" placeholder="Valor de a" />
+            <span asp-validation-for="AValue" class="text-danger"></span>
+        </div>
+        <br />
+        <br />
+        <label asp-for="BValue" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+            <input asp-for="BValue" class="form-control" placeholder="Valor de b" />
+            <span asp-validation-for="BValue" class="text-danger"></span>
+        </div>
+        <br />
+        <br />
+        <label asp-for="CValue" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+            <input asp-for="CValue" class="form-control" placeholder="Valor de c" />
+            <span asp-validation-for="CValue" class="text-danger"></span>
+        </div>
+        <br />
+        <br />
+        <div class="col-sm-10">
+            <button asp-controller="QuadraticEquation" asp-action="GetQuadraticEquation" class="btn btn-primary">Consultar</button>
+        </div>
+    </div>
+</form>

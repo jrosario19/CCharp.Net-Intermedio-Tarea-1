@@ -8,9 +8,10 @@ namespace CCharp.Net_Intermedio_Tarea_1__Ejercicio_1.Models
 {
     public class ZodiacSign
     {
-        [Required(ErrorMessage = "Campo requerido")]
+        
         [Display(Name = "Dia")]
         [Range(1,31, ErrorMessage ="Dia debe estar entre 1 y 31")]
+        [Required(ErrorMessage = "Campo requerido")]
         public int Day { get; set; }
         [Required(ErrorMessage = "Campo requerido")]
         [Display(Name = "Mes")]
